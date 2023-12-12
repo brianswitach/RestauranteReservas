@@ -11,7 +11,6 @@ const connection = mysql.createConnection({
   database: 'reservas'
 });
 
-// Establecer la conexión con la base de datos
 connection.connect(error => {
   if (error) {
     console.error('Error conectando a la base de datos:', error);
