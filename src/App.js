@@ -8,22 +8,20 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Bienvenido a la aplicación de reservas</h1>
+        <h1 className='reservastitulo'>Reservas</h1>
+        <div>
         {/* El componente FormularioReserva permite a los usuarios añadir nuevas reservas */}
         <FormularioReserva />
+        </div>
+       </header>
+
+       <body>
+        <div>
         {/* El componente ListaReservas se incluirá aquí y mostrará las reservas */}
         <ListaReservas />
+        </div> 
         {/* Este enlace se puede quitar o modificar según tus necesidades */}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprende React
-        </a>
-      </header>
+       </body>
     </div>
   );
 }

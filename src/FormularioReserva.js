@@ -49,37 +49,41 @@ const FormularioReserva = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Nombre del Cliente:
-        <input type="text" name="nombreCliente" value={reserva.nombreCliente} onChange={handleChange} />
-      </label>
-      <label>
-        Apellido del Cliente:
-        <input type="text" name="apellidoCliente" value={reserva.apellidoCliente} onChange={handleChange} />
-      </label>
-      <label>
-        Fecha de Reserva:
-        <input type="date" name="fechaReserva" value={reserva.fechaReserva} onChange={handleChange} />
-      </label>
-      <label>
-        Hora de Reserva:
-        <input type="time" name="horaReserva" value={reserva.horaReserva} onChange={handleChange} />
-      </label>
-      <label>
-        Número de Personas:
-        <input type="number" name="numeroPersonas" value={reserva.numeroPersonas} onChange={handleChange} />
-      </label>
-      <label>
-        Teléfono de Contacto:
-        <input type="text" name="telefonoContacto" value={reserva.telefonoContacto} onChange={handleChange} />
-      </label>
-      <label>
-        Información Adicional:
-        <textarea name="informacionAdicional" value={reserva.informacionAdicional} onChange={handleChange}></textarea>
-      </label>
-      <button type="submit">Crear Reserva</button>
-    </form>
+    <div className="App-header"> {/* Usa App-header para mantener el estilo del header */}
+      <div className="form-container"> {/* Contenedor del formulario con el estilo definido */}
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Nombre del Cliente:</label>
+            <input type="text" name="nombreCliente" value={reserva.nombreCliente} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label>Apellido del Cliente:</label>
+            <input type="text" name="apellidoCliente" value={reserva.apellidoCliente} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label>Fecha de Reserva:</label>
+            <input type="date" name="fechaReserva" value={reserva.fechaReserva} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label>Hora de Reserva:</label>
+            <input type="time" name="horaReserva" value={reserva.horaReserva} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label>Número de Personas:</label>
+            <input type="number" name="numeroPersonas" value={reserva.numeroPersonas} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label>Teléfono de Contacto:</label>
+            <input type="text" name="telefonoContacto" value={reserva.telefonoContacto} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label>Información Adicional:</label>
+            <textarea name="informacionAdicional" value={reserva.informacionAdicional} onChange={handleChange} />
+          </div>
+          <button type="submit">Crear Reserva</button>
+        </form>
+      </div>
+    </div>
   );
 };
 

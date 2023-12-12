@@ -5,7 +5,7 @@ const ListaReservas = () => {
 
   useEffect(() => {
     // Asegúrate de que la dirección corresponda con tu servidor backend y puerto
-    fetch('http://localhost:3001/reservas')
+    fetch('http://localhost:3001/api/reservas')
       .then(response => {
         if (response.ok) {
           return response.json();
@@ -18,19 +18,19 @@ const ListaReservas = () => {
 
   return (
     <div>
-      <h1>Listado de Reservas</h1>
+      <h1 className="lista-reservas-titulo">Listado de Reservas</h1>
       {reservas.length > 0 ? (
         <ul>
           {reservas.map(reserva => (
             <li key={reserva.id}>
               {/* Asegúrate de cambiar estos campos por los que correspondan con tu esquema de datos */}
-              <p>Cliente: {reserva.nombreCliente}</p>
+              <p className='lista-reservas-clientes'>{reserva.nombreCliente} - {reserva.horaReserva}</p>
               {/* Agrega más detalles de la reserva aquí */}
             </li>
           ))}
         </ul>
       ) : (
-        <p>No hay reservas disponibles.</p>
+        <p className='lista-reservas-titulo'>No hay reservas disponibles.</p>
       )}
     </div>
   );
